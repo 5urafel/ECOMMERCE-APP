@@ -9,20 +9,22 @@ import Login from "./pages/Login";
 import PlaceOrder from "./pages/PlaceOrder";
 import Product from "./pages/Product";
 import Orders from "./pages/Orders";
+import Navbar from "./components/Navbar";
 
 const App = () => {
   return (
-    <div>
+    <div className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
+      <Navbar />
       <Routes>
-        <Route to="/" element={<Home />} />
-        <Route to="/about" element={<About />} />
-        <Route to="/cart" element={<Cart />} />
-        <Route to="/collection" element={<Collection />} />
-        <Route to="/contact" element={<Contact />} />
-        <Route to="/login" element={<Login />} />
-        <Route to="/place-order" element={<PlaceOrder />} />
-        <Route to="/product/:productId" element={<Product />} />
-        <Route to="/orders" element={<Orders />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/collection" element={<Collection />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/place-order" element={<PlaceOrder />} />
+        <Route path="/product/:productId" element={<Product />} />
+        <Route path="/orders" element={<Orders />} />
       </Routes>
     </div>
   );
