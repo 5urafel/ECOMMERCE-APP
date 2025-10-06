@@ -12,8 +12,8 @@ const Add = ({ token }) => {
 
   const [name, setName] = React.useState("");
   const [description, setDescription] = React.useState("");
-  const [category, setCategory] = React.useState("");
-  const [subCategory, setSubCategory] = React.useState("");
+  const [category, setCategory] = React.useState("Men");
+  const [subCategory, setSubCategory] = React.useState("Topwear");
   const [price, setPrice] = React.useState("");
   const [sizes, setSizes] = React.useState([]);
   const [bestseller, setBestseller] = React.useState(false);
@@ -50,6 +50,8 @@ const Add = ({ token }) => {
         setImage4(false);
         setName("");
         setDescription("");
+      } else {
+        toast.error(response.data.message);
       }
       console.log(response.data);
     } catch (error) {
